@@ -1,4 +1,4 @@
-resource "yandex_compute_instance" "windows-resource" {
+resource "yandex_compute_instance" "windows_resource" {
   name       = "windows-resource"
   zone       = var.timezone
   hostname   = "windows.yc"
@@ -14,7 +14,7 @@ resource "yandex_compute_instance" "windows-resource" {
       image_id    = local.image_id_map[terraform.workspace].id
       name        = "root-node-windows"
       type        = "network-nvme"
-      size        = "30"
+      size        = "50"
     }
   }
 
